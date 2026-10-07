@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/componentes.css">
+<title>RutaDenuncia · Cómo denunciar según tu situación</title><meta name="description" content="Guías paso a paso para saber cómo y dónde presentar una denuncia, ordenadas por tipo de situación."></head><body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="emergencia" role="region" aria-label="Números de emergencia">
+  <div class="contenedor"><span><strong>Emergencia:</strong> PNP 105</span><span><strong>Violencia familiar o sexual:</strong> Línea 100</span></div>
+</div>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="marca" href="index.html">RutaDenuncia</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html" aria-current="page">Inicio</a>
+      <a href="sugerencias.html">Sugerencias</a>
+    </nav>
+  </div>
+</header>
+<main id="contenido">
+  <section class="portada contenedor">
+    <h1>¿Qué situación necesitas denunciar?</h1>
+    <p>Cada situación tiene un proceso distinto. Busca la tuya o elige una categoría para ver los pasos, qué llevar y a dónde acudir.</p>
+    <form id="form-buscar" class="buscador" role="search">
+      <label for="q" class="visually-hidden" style="position:absolute;left:-999px">Buscar situación</label>
+      <input type="search" id="q" name="q" placeholder="Por ejemplo: estafa, robo, violencia familiar" autocomplete="off">
+      <button class="btn" type="submit">Buscar</button>
+    </form>
+  </section>
+  <div class="contenedor">
+    <div id="categorias" aria-live="polite"></div>
+    <div id="sin-resultados" class="vacio" hidden>
+      <p>No encontramos guías con ese texto. Prueba con otra palabra o <a href="sugerencias.html">propón una nueva guía</a>.</p>
+    </div>
+  </div>
+</main>
+<footer class="pie"><div class="contenedor"><p>RutaDenuncia es una guía informativa. No recibe denuncias ni reemplaza la asesoría legal. Verifica siempre en la fuente oficial.</p></div></footer>
+<script src="js/datos.js"></script><script src="js/buscador.js"></script></body></html>

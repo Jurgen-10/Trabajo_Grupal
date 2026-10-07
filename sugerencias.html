@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="es"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap">
+<link rel="stylesheet" href="css/variables.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/componentes.css">
+<title>Sugerencias · RutaDenuncia</title></head><body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+<div class="emergencia" role="region" aria-label="Números de emergencia">
+  <div class="contenedor"><span><strong>Emergencia:</strong> PNP 105</span><span><strong>Violencia familiar o sexual:</strong> Línea 100</span></div>
+</div>
+<header class="cabecera">
+  <div class="contenedor">
+    <a class="marca" href="index.html">RutaDenuncia</a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="sugerencias.html" aria-current="page">Sugerencias</a>
+    </nav>
+  </div>
+</header>
+<main id="contenido" class="contenedor">
+  <section class="portada">
+    <h1>Ayúdanos a mejorar las guías</h1>
+    <p>Cuéntanos si encontraste un error o si falta una situación. No escribas datos personales ni detalles de un caso.</p>
+  </section>
+  <form id="form-sugerencia" class="formulario" novalidate>
+    <div class="campo">
+      <label for="tipo">¿Qué quieres hacer?</label>
+      <select id="tipo" name="tipo" aria-describedby="tipo-error">
+        <option value="">Elige una opción</option>
+        <option value="error">Reportar un error</option>
+        <option value="nueva">Proponer una nueva guía</option>
+        <option value="mejora">Sugerir una mejora</option>
+      </select>
+      <p class="error" id="tipo-error" role="alert"></p>
+    </div>
+    <div class="campo">
+      <label for="mensaje">Tu mensaje <span class="ayuda">(10 a 500 caracteres)</span></label>
+      <textarea id="mensaje" name="mensaje" rows="5" aria-describedby="mensaje-error"></textarea>
+      <p class="error" id="mensaje-error" role="alert"></p>
+    </div>
+    <div class="campo">
+      <label for="correo">Correo <span class="ayuda">(opcional, solo si quieres respuesta)</span></label>
+      <input type="email" id="correo" name="correo" autocomplete="email" aria-describedby="correo-error">
+      <p class="error" id="correo-error" role="alert"></p>
+    </div>
+    <div class="campo">
+      <label><input type="checkbox" id="acepto" name="acepto" aria-describedby="acepto-error"> Acepto que usen este mensaje para mejorar el contenido.</label>
+      <p class="error" id="acepto-error" role="alert"></p>
+    </div>
+    <button class="btn" type="submit">Enviar sugerencia</button>
+    <p id="resultado" role="status"></p>
+  </form>
+</main>
+<footer class="pie"><div class="contenedor"><p>RutaDenuncia es una guía informativa. No recibe denuncias ni reemplaza la asesoría legal. Verifica siempre en la fuente oficial.</p></div></footer>
+<script src="js/validaciones.js"></script></body></html>

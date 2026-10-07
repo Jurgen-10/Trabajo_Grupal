@@ -1,0 +1,55 @@
+/* Componentes: emergencia, navegación, tarjetas, guía, formularios */
+.emergencia { background: var(--alerta-fondo); border-bottom: 2px solid var(--alerta); font-size: .95rem; }
+.emergencia .contenedor { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; padding-block: .5rem; }
+.emergencia strong { color: var(--alerta); }
+
+.cabecera { background: var(--superficie); border-bottom: 1px solid var(--borde); }
+.cabecera .contenedor { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem 1.5rem; padding-block: .75rem; }
+.marca { font-weight: 700; font-size: 1.25rem; color: var(--primario); text-decoration: none; }
+.nav { display: flex; gap: 1.25rem; }
+.nav a { color: var(--tinta); text-decoration: none; padding-block: .25rem; }
+.nav a[aria-current="page"] { border-bottom: 3px solid var(--primario); font-weight: 700; }
+
+.portada { padding-block: 2.5rem 1.5rem; }
+.buscador { display: flex; flex-wrap: wrap; gap: .5rem; max-width: 640px; }
+.buscador input { flex: 1 1 260px; }
+
+.grupo { margin-block: 2rem; }
+.grupo-cabecera { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px solid var(--borde); margin-bottom: 1rem; }
+.cantidad { font-size: .9rem; color: var(--texto-suave); }
+.grid-tarjetas { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--espacio);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.tarjeta { display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+  background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); padding: 1rem 1.1rem; }
+.tarjeta p { margin: 0; font-size: .92rem; color: var(--texto-suave); }
+
+.btn { display: inline-block; font: inherit; font-weight: 700; text-decoration: none; cursor: pointer;
+  background: var(--primario); color: #fff; border: 2px solid var(--primario); border-radius: 8px; padding: .55rem 1rem; }
+.btn:hover { background: var(--primario-oscuro); border-color: var(--primario-oscuro); color: #fff; }
+.btn-suave { background: transparent; color: var(--primario-oscuro); white-space: nowrap; }
+.btn-suave:hover { background: #e3f3f1; color: var(--primario-oscuro); }
+
+.vacio { background: var(--superficie); border: 1px dashed var(--borde); border-radius: var(--radio); padding: 1.5rem; }
+
+.migas { font-size: .92rem; color: var(--texto-suave); margin-block: 1.25rem .5rem; }
+.guia { display: grid; gap: 2rem; grid-template-columns: 1fr; padding-bottom: 3rem; }
+.pasos { list-style: none; counter-reset: paso; margin: 0; padding: 0; }
+.pasos li { counter-increment: paso; position: relative; background: var(--superficie); border: 1px solid var(--borde);
+  border-radius: var(--radio); padding: .9rem 1rem .9rem 3.4rem; margin-bottom: .75rem; }
+.pasos li::before { content: counter(paso); position: absolute; left: 1rem; top: .8rem; width: 1.75rem; height: 1.75rem;
+  border-radius: 50%; background: var(--primario); color: #fff; font-weight: 700; display: grid; place-items: center; }
+.lateral { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); padding: 1.25rem; align-self: start; }
+.lateral ul { padding-left: 1.2rem; margin: 0 0 1rem; }
+.aviso { font-size: .9rem; color: var(--texto-suave); border-left: 4px solid var(--alerta); padding-left: .75rem; }
+@media (min-width: 800px) { .guia { grid-template-columns: 2fr 1fr; } }
+
+.formulario { background: var(--superficie); border: 1px solid var(--borde); border-radius: var(--radio); padding: 1.5rem; max-width: 640px; margin-bottom: 3rem; }
+.campo { margin-bottom: 1.1rem; }
+label { display: block; font-weight: 700; margin-bottom: .25rem; }
+.ayuda { font-weight: 400; color: var(--texto-suave); font-size: .9rem; }
+input[type="search"], input[type="email"], select, textarea {
+  width: 100%; font: inherit; padding: .6rem .75rem; border: 2px solid var(--borde); border-radius: 8px; background: #fff; color: var(--tinta); }
+[aria-invalid="true"] { border-color: #b42318; }
+.error { color: #b42318; font-size: .92rem; margin: .25rem 0 0; min-height: 1.2em; }
+.exito { background: #e6f4ea; border: 1px solid #1e7a3c; border-radius: 8px; padding: .75rem 1rem; }
+.pie { border-top: 1px solid var(--borde); background: var(--superficie); padding-block: 1.25rem; font-size: .9rem; color: var(--texto-suave); }

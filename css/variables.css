@@ -1,0 +1,15 @@
+/* Variables de diseño: colores, tipografía y espaciados */
+:root {
+  --tinta: #14213d;
+  --primario: #0f766e;
+  --primario-oscuro: #0b5a54;
+  --alerta: #b45309;
+  --alerta-fondo: #fff4e5;
+  --fondo: #f4f6f8;
+  --superficie: #ffffff;
+  --borde: #d5dbe3;
+  --texto-suave: #4a5568;
+  --radio: 10px;
+  --espacio: 1rem;
+  --fuente: "Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+}
